@@ -1,0 +1,23 @@
+$theme-colors: (
+  'primary': #003d8e,
+  'secondary': #e85e0e,
+  'danger': #e8270e,
+  'light': #f1f7ff,
+  'dark': #003d8e,
+);
+
+//Enlève le border-radius sur les boutons :
+$btn-border-radius: none;
+$btn-border-radius-lg: none;
+$btn-border-radius-sm: none;
+
+$font-size-base: 1rem;
+$h3-font-size: $font-size-base * 1.25;
+
+$spacer: 1rem !default;
+
+$spacers: (
+  6: (
+    $spacer * 4,
+  ),
+);

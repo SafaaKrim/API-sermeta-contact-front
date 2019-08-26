@@ -1,0 +1,77 @@
+<div class ="form form-daccord">
+  <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Ajouter un contact </h2>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="contactForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Nom</label>
+        <input type="text" class="form-control" formControlName="nom" #nom />
+      </div>
+      <div *ngIf="contactForm.controls['nom'].invalid && (contactForm.controls['nom'].dirty || contactForm.controls['nom'].touched)" class="alert alert-dcontacter">
+        <div *ngIf="contactForm.controls['nom'].errors.required"></div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Prénom </label>
+        <input type="text" class="form-control" formControlName="prenom" #prenom />
+      </div>
+      <div *ngIf="contactForm.controls['prenom'].invalid && (contactForm.controls['prenom'].dirty || contactForm.controls['prenom'].touched)" class="alert alert-dcontacter">
+        <div *ngIf="contactForm.controls['prenom'].errors.required"></div>
+      </div>
+     <div class="form-group">
+        <label class="col-md-4"> entreprise </label>
+        <input type="text" class="form-control" formControlName="entreprise" #entreprise />
+      </div>
+      <div *ngIf="contactForm.controls['entreprise'].invalid && (contactForm.controls['entreprise'].dirty || contactForm.controls['entreprise'].touched)" class="alert alert-dcontacter">
+        <div *ngIf="contactForm.controls['entreprise'].errors.required"></div>
+      </div>
+      
+ <div class="form-group col-md-6">
+  <label for="inputSexe">Sexe</label>
+  <select id="inputSexe" class="form-control" >
+    <option selected></option>
+    <option>Homme</option>
+    <option>Femme</option>
+  </select>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputEmail4">adresse_mail</label>
+    <input type="adresse_mail" class="form-control" id="inputEmail4" placeholder="adresse_mail" #adresse_mail>
+</div></div>
+<div *ngIf="contactForm.controls['adresse_mail'].invalid && (contactForm.controls['addsress_mail'].dirty || contactForm.controls['adresse_mail'].touched)" class="alert alert-dcontacter">
+<div *ngIf="contactForm.controls['adresse_mail'].errors.required">
+</div>
+</div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputVille">Ville</label>
+    <input type="text" class="form-control" id="inputVille" #Ville>
+  </div>
+</div>
+<div *ngIf="contactForm.controls['ville'].invalid && (contactForm.controls['ville'].dirty || contactForm.controls['ville'].touched)" class="alert alert-dcontacter">
+<div *ngIf="contactForm.controls['ville'].errors.required">
+</div>
+</div>
+
+  <div class="form-row">
+      <div class="form-group col-md-6">
+          <label for="phone"> Numero de téléphne:</label>
+          <input type="tel" class="form-control" id="phone" 
+                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                 required >
+        </div>
+      </div>
+<div *ngIf="contactForm.controls['téléphne'].invalid && (contactForm.controls['téléphne'].dirty || contactForm.controls['téléphne'].touched)" class="alert alert-dcontacter">
+<div *ngIf="contactForm.controls['téléphne'].errors.required">
+</div><br/>
+</div>
+      <div class="form-group">
+        <button type="submit" 
+        [disabled]="contactForm.pristine || contactForm.invalid" 
+        class="btn btn-primary">Ajouter</button>
+      </div>
+    </form>
+  </div>
+</div></div></div></div>

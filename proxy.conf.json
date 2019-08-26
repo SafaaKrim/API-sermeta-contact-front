@@ -1,0 +1,8 @@
+{
+  " / api / * " : {
+    " cible " : " http: // localhost: 3000 " ,
+    " secure " : faux ,
+    " logLevel " : " debug " ,
+    " changeOrigin " : true
+  }
+}

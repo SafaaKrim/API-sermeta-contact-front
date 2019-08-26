@@ -1,0 +1,56 @@
+<div class ="form form-daccord">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2>Ajouter une entreprise</h2>
+          <div class="form-group">
+          <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+              <div class="row">
+                  <div class="col">
+                      <label for="inputDénomination">Dénomination</label>
+                    <input type="text" class="form-control" placeholder="Dénomination">
+                  </div>
+                  <div class="col">
+                      <label for="inputFInalité">FInalité</label>
+                    <input type="text" class="form-control" placeholder="FInalité">
+                  </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputTaille4">Taille</label>
+                      <input type="text" class="form-control" id="inputTaille4" placeholder="Taille">
+                  
+                    <label for="inputStatu">Statu juridique</label>
+                    <input type="text" class="form-control" id="inputStatu" placeholder="1234 Main St">
+                  </div>
+                </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputVille">Ville</label>
+                      <input type="text" class="form-control" id="inputVille">
+                    </div>
+                  </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone"> Numero de téléphne:</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                   required>
+                          
+                        </div>
+                  </div>
+                
+                      <div class="col">
+                          <label for="inputContact">Contact</label>
+                          <input type="text" class="form-control" id="inputContact">
+           </div><br/>
+         
+            <button class="btn btn-primary"
+                    type="submit"
+                    [disabled]="ngForm.invalid">Ajouter</button>
+          </form>
+          <p class="text-danger">{{ errorMessage }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
