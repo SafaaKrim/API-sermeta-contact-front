@@ -11,19 +11,10 @@ export class ContactService {
 
   constructor(private http: HttpClient) { }
 
-  addContact(nom, prenom, sexe,adresse_mail, téléphone, ville, entreprise) {
-    const obj = {
-      nom : nom ,
-      prenom :prenom ,
-      sexe :sexe ,
-      adresse_mail :adresse_mail ,
-      téléphone :téléphone ,
-      ville :ville ,
-      entreprise :entreprise 
-    };
-    console.log(obj);
-    this.http.post(`${this.uri}/add`, obj)
-        .subscribe(res => console.log('Done'));
+  addContact( nom : String , prenom : String , sexe : String ,adresse_mail : String , telephone : String , ville : String, entreprise: String) {
+    alert('dans service');
+ 
+    this.http.post(`${this.uri}/`, {'nom' : nom , 'prenom' : prenom , 'adresse_mail' : adresse_mail , 'telephone'  : telephone , 'ville' : ville , 'entreprise' : entreprise }).subscribe(res => console.log('Done'));
   }
   getContact() {
     return this
