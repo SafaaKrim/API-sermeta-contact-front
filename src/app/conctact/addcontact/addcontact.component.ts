@@ -25,13 +25,13 @@ export class AddcontactComponent implements OnInit {
 
   createForm() {
     this.contactForm = this.formBuilder.group({
-     nom: ['', Validators.required ],
-      prenom : ['', Validators.required ],
-      sexe : ['', Validators.required ],
-      adresse_mail : ['', Validators.required ],
-      téléphone : ['', Validators.required ],
-      ville : ['', Validators.required ],
-      entreprise : ['', Validators.required ]
+     nom: '',
+      prenom : '',
+      sexe : '',
+      adresse_mail : '',
+      telephone : '' ,
+      ville : '',
+      entreprise : ''
     });
   }
 
@@ -42,30 +42,31 @@ export class AddcontactComponent implements OnInit {
   }
   initForm() {
     this.contactForm = this.formBuilder.group({
-    nom: ['', Validators.required ],
-     prenom : ['', Validators.required ],
-     sexe : ['', Validators.required ],
-     adresse_mail : ['', Validators.required ],
-     téléphone : ['', Validators.required ],
-     ville : ['', Validators.required ],
-     entreprise : ['', Validators.required ]
+    nom: '' ,
+     prenom : '',
+     sexe : '',
+     adresse_mail : '',
+     telephone : '',
+     ville : '',
+     entreprise : ''
     });
   }
 
 
   onSubmitForm() {
-    const formValue = this.contactForm.value;
-    const newcontact = new Contact(
-      formValue['nom'],
-      formValue['prenom'],
-      formValue['sexe'],
-      formValue['adresse_mail'],
-      formValue['téléphone'],
-      formValue['ville'],
-      formValue['entreprise']
-    );
-    //this.contactService.addcontact(newContact);
-    this.router.navigate(['/listcontacts']);
+    //const formValue = this.contactForm;
+    alert(this.contactForm.value.nom);
+    this.ContactService.addContact(this.contactForm.value.nom,
+      this.contactForm.value.prenom,
+      this.contactForm.value.sexe,
+      this.contactForm.value.adresse_mail,
+      this.contactForm.value.telephone,
+      this.contactForm.value.ville,
+      this.contactForm.value.entreprise);
+
+    alert('Dans Component');
+    
+   // this.router.navigate(['/listcontacts']);
   }
 
 }
