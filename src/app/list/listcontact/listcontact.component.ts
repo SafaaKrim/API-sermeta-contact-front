@@ -29,14 +29,18 @@ export class ListcontactComponent implements OnInit ,OnDestroy {
     ) { }
 
     ngOnInit() {
-      
-      this.ContactService
-         .getContact()
-         .subscribe((data: Contact[]) => {
-           console.log('got contact list:'+data+'now setting data to contacts'); 
-           this.contacts = data;
-         });
+    this.refreshList()
      
+  }
+
+  refreshList(){
+      
+    this.ContactService
+    .getContact()
+    .subscribe((data: Contact[]) => {
+      console.log('got contact list:'+data+'now setting data to contacts'); 
+      this.contacts = data;
+    });
   }
 
   initForm() {
@@ -60,6 +64,7 @@ export class ListcontactComponent implements OnInit ,OnDestroy {
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
+      this.refreshList()
       });
   }
 }
