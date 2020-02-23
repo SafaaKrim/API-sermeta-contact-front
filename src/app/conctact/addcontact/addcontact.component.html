@@ -1,29 +1,29 @@
 <div class ="form form-daccord" >
   <div class="row">
       <div class="col-sm-8 col-sm-offset-2">
-        <h2>Ajouter un contact </h2>
+        <h2> Ajouter un contact </h2>
 <div class="card">
-  <div class="card-body">
+  <div class="card-body"> 
     <form [formGroup]="contactForm"  (submit)="onSubmitForm()">
       <div class="form-group">
-        <label class="col-md-4">Nom</label>
-        <input type="text" class="form-control" formControlName="nom"  />
+        <label class="col-md-4" >Nom</label>
+        <input type="text" [(ngModel)]="nom" class="form-control" formControlName="nom"  />
       </div>
       
       <div class="form-group">
         <label class="col-md-4">Prénom </label>
-        <input type="text" class="form-control" formControlName="prenom"  />
+        <input type="text" [(ngModel)]="prenom"  class="form-control" formControlName="prenom"  />
       </div>
       
      <div class="form-group">
         <label class="col-md-4"> entreprise </label>
-        <input type="text" class="form-control" formControlName="entreprise" />
+        <input type="text" [(ngModel)]="entreprise" class="form-control" formControlName="entreprise" />
       </div>
       
       
  <div class="form-group col-md-6">
   <label for="inputSexe">Sexe</label>
-  <select id="inputSexe" class="form-control" formControlName="sexe" >
+  <select [(ngModel)]="sexe" id="inputSexe" class="form-control" formControlName="sexe" >
     <option selected></option>
     <option>Homme</option>
     <option>Femme</option>
@@ -32,13 +32,13 @@
 <div class="form-row">
   <div class="form-group col-md-6">
     <label for="inputEmail4">adresse_mail</label>
-    <input type="adresse_mail" class="form-control" id="inputEmail4" placeholder="adresse_mail" formControlName="adresse_mail">
+    <input type="adresse_mail"[(ngModel)]="adresse_mail"  class="form-control" id="inputEmail4" placeholder="adresse_mail" formControlName="adresse_mail">
 </div></div>
 
 <div class="form-row">
   <div class="form-group col-md-6">
     <label for="inputVille">Ville</label>
-    <input type="text" class="form-control" id="inputVille" formControlName="ville">
+    <input type="text"  [(ngModel)]="ville" class= "form-control" id="inputVille" formControlName="ville">
   </div>
 </div>
 
@@ -46,7 +46,7 @@
   <div class="form-row">
       <div class="form-group col-md-6">
           <label for="phone"> Numero de telephone:</label>
-          <input type="tel" class="form-control" id="phone" formControlName="telephone"
+          <input type="tel" [(ngModel)]="telephone" class="form-control" id="phone" formControlName="telephone"
                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                  required   >
         </div>

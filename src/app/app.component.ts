@@ -13,14 +13,7 @@ import { NavigationCancel,
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
- // MONGODB_ADDON_DB="beeiry16zortgfz"
- // MONGODB_ADDON_HOST="beeiry16zortgfz-mongodb.services.clever-cloud.com"
-  //MONGODB_ADDON_PASSWORD="K4Ldqnot9Y6pAFfbUmh2"
-//  MONGODB_ADDON_PORT="27017"
- // MONGODB_ADDON_URI="mongodb://uvr09ybn0bcjyvbyfxra:K4Ldqnot9Y6pAFfbUmh2@beeiry16zortgfz-mongodb.services.clever-cloud.com:27017/beeiry16zortgfz"
-//  MONGODB_ADDON_USER="uvr09ybn0bcjyvbyfxra"
- // MONGODB_ADDON_VERSION="4.0.3"
-  //title = 'sermeta-contact-front';
+ 
   title = 'angular7crud';
   constructor(private _loadingBar: SlimLoadingBarService, private _router: Router) {
     this._router.events.subscribe((event: Event) => {

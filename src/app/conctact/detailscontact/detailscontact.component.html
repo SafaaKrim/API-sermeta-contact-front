@@ -1,1 +1,25 @@
-<p>detailscontact works!</p>
+<div id="contact-details">
+      <h1 class="text-primary pb-3"> Informations sur le contact n° {{id}}</h1>
+      <div class="row">
+        <div class="col pl-5">
+          <h2>Informations sur le contact</h2>
+          <h3>Nom de contact</h3>
+          <p>{{nom}}</p>
+          <h3>Prénom de contact</h3>
+          <p>{{prenom}}</p>
+          <h3>ville</h3>
+          <div v-if="contact.date">
+            <p>{{ville}}</p>
+          </div>
+          <h3>Numéro de contact</h3>
+          <p>{{telephone}}</p>
+        </div>
+        <div class="col">
+          <h2>Informations de entreprise</h2>
+          <h3>Entreprise</h3>
+          <p>{{entreprise}}</p>
+        </div>  
+     </div>
+    </div>
+
+ 

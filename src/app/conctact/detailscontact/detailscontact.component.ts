@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { ContactService } from 'src/app/services/contact.service';
 
 
@@ -11,34 +10,51 @@ import { ContactService } from 'src/app/services/contact.service';
 })
 export class DetailscontactComponent implements OnInit {
 
-  contact: any = {};
-  angForm: FormGroup;
+    nom:string
+    prenom : String;
+    sexe : String;
+    adresse_mail : String;
+    telephone : String;
+    ville : String;
+    entreprise : String ;
+    id:string;
+    contact: any = {};
+
+    errorMessage: [ ];
+  
 
   constructor(private route: ActivatedRoute,
-    private router: Router,
-    private contactService :   ContactService,
-    private contactform : FormBuilder) {
-      this.createForm();
- }
-
-  createForm() {
-    this.angForm = this.contactform.group({
-      nom: ['', Validators.required ],
-      prenom : ['', Validators.required ],
-      sexe : ['', Validators.required ],
-      adresse_mail : ['', Validators.required ],
-      téléphone : ['', Validators.required ],
-      ville : ['', Validators.required ],
-      entreprise : ['', Validators.required ]
-      });
-    }
-
+    private ContactService : ContactService,
+) {
+}
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-        this.contactService.editContact(params['id']).subscribe(res => {
-         this.contact = res;
-    });
-    });
+    
+    this.route.queryParams
+    .filter(contact => contact.id)
+    .subscribe(contact => {
+      console.log(contact); 
+    if (contact.id == null){
+  console.log("contactid est null")
+
+    }
+
+  else { 
+  this.id = contact.id;
+  console.log(this.id);
+  this.ContactService.getContactbyid(this.id).subscribe
+  ((data:any)=>{ 
+
+    this.nom= data.nom,
+    this.prenom = data.prenom,
+    this.sexe = data.sexe,
+    this.adresse_mail= data.adresse_mail,
+    this.telephone = data.telephone,
+    this.ville = data.ville,
+    this.entreprise = data.entreprise
+
+  });
+}
+  });
   }
 }

@@ -28,12 +28,13 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'list/listentreprise', component: ListentrepriseComponent},
   { path: 'list/listcontact', component: ListcontactComponent},
+  { path: 'contact/conctact', component: ConctactComponent},
   { path: 'contact/addcontact', component: AddcontactComponent},
   { path: 'entreprise/addentreprise', component: AddentrepriseComponent},
   { path: 'contact/detailscontact', component: DetailscontactComponent},
-  { path: 'entreprise/detailscontact', component: DetailscontactComponent},
-
-
+  { path: 'entreprise/detailsentreprise', component: DetailsentrepriseComponent},
+  { path: 'contact/suppcontact', component: SuppcontactComponent},
+  { path: 'entreprise/supentreprise', component: SupentrepriseComponent},
 
 ]
 

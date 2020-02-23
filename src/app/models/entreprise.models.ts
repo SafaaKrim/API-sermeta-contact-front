@@ -1,10 +1,11 @@
-export class entreprise {
-     nom : String;
-     prenom : String;
-     sexe : String;
-     adresse_mail : String;
-     téléphone : String;
-     ville : String;
-     entreprise : String 
-   
+export class Entreprise {
+    constructor( 
+        public denomination: String,
+        public finalite: String,
+        public taille: String,
+        public statut_juridique:String,
+        public natinalite: String,
+        public ville: String,
+        public contact: String
+     ){}
 }

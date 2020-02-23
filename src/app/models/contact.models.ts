@@ -4,8 +4,8 @@ export class Contact {
        public prenom : String,
        public sexe : String, 
        public adresse_mail : String,
-       public téléphone : String,
+       public telephone : String,
        public ville : String,
        public entreprise: String 
       ){}
-    }
+}

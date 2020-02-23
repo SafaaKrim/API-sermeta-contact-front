@@ -1,0 +1,24 @@
+<div id="entreprise-details">
+    <h1 class="text-primary pb-3"> Informations sur l'entreprise n° {{id}}</h1>
+    <div class="row">
+      <div class="col pl-5">
+        <h2>Informations sur l'entreprise</h2>
+        <h3>Nom d'entreprise</h3>
+        <p>{{denomination}}</p>
+        <h3>Prénom d'entreprise</h3>
+        <p>{{finalite}}</p>
+        <h3>taille</h3>
+        <p>{{taille}}</p>
+        <h3>statut juridique</h3>
+        <div v-if="entreprise.date">
+        <p>{{statut_juridique}}</p>
+      </div>
+      <div class="col">
+        <h2>Informations de contact de l'entreprise</h2>
+        <h3>Contact</h3>
+        <p>{{contact}}</p>
+      
+   
+      </div>
+</div>
+</div>

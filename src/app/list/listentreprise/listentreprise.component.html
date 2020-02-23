@@ -1,9 +1,9 @@
 <div>
-        <h2 class="text-left">Eentreprise</h2>
+        <h2 class="text-left">Entreprises</h2>
 
         <div class="text-right">
             <button type="submit" class="btn btn-primary"
-            (click)="changementDePage();">Ajouter un Eentreprise</button></div><br/>
+        (click)="changementDePage();">Ajouter une Eentreprise</button></div><br/>
         <table class="table table-hover table-bordered">
               <thead class="thead-dark">
                 <tr>
@@ -13,19 +13,18 @@
                     <th>Ville</th>
                     <th>modifier</th>
                     <th>supprimer </th>
-                    <th>details</th>
-                    
+                    <th>details</th>    
                 </tr>
             </thead>
-            <tr>
-                  <td class="text-center align-middle">1</td>
-                  <td class="align-middle">krim</td>
-                  <td class="align-middle">safaa</td>
-                 <td class="align-middle">brest</td>
-                <th routerLinkActive="active"><button class="btn btn-info"><a routerLink="entreprise/detailentreprise"><div class="glyphicon glyphicon-pencil"></div></a></button
-                    ></th>
-               <th routerLinkActive="active"><button class="btn btn-danger"><a routerLink="entreprise/supentreprise"><div class="glyphicon glyphicon-trash"></div></a></button></th> 
-            <th routerLinkActive="active"><button class="btn btn-success"><a routerLink="entreprise/addentreprise"><div class="glyphicon glyphicon-plus"></div></a></button></th>   
+            <tr routerLinkActive="active" *ngFor = "let entreprise of entreprises">
+                  <td class="text-center align-middle">{{entreprise.id}}</td>
+                  <td class="align-middle">{{entreprise.denomination}}</td>
+                  <td class="align-middle">{{entreprise.finalite}}</td>
+                 <td class="align-middle">{{entreprise.ville}}</td>
+                 <th><button class="btn btn-info" ><a [routerLink]="['/entreprise/addentreprise']" [queryParams]="{ id: entreprise._id }"><div class="glyphicon glyphicon-pencil"></div></a></button></th>
+                 <th><button class="btn btn-danger"><div class="glyphicon glyphicon-trash"></div></button></th> 
+                 <th><button class="btn btn-success"><a [routerLink]="['/entreprise/detailsentreprise']" [queryParams]="{ id: entreprise._id }"><div class="glyphicon glyphicon-plus"></div></a></button></th>   
+    
                     </tr>
         </table>
     </div>
