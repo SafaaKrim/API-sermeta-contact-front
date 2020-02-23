@@ -4,6 +4,9 @@ import { Contact } from 'src/app/models/contact.models';
 import { Subscription } from 'rxjs/Subscription';
 import { ContactService } from 'src/app/services/contact.service';
 
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { DeleteContactBoxDialog } from './delete-contact-box.component';
+
 
 
 
@@ -21,7 +24,8 @@ export class ListcontactComponent implements OnInit ,OnDestroy {
 
   constructor( 
     private ContactService: ContactService,
-    private router : Router
+    private router : Router,
+    public deleteDialog: MatDialog
     ) { }
 
     ngOnInit() {
@@ -32,24 +36,7 @@ export class ListcontactComponent implements OnInit ,OnDestroy {
            console.log('got contact list:'+data+'now setting data to contacts'); 
            this.contacts = data;
          });
-         
-    // this.ContactService.deleteContact(Contact.id);
-     //     this.ContactService
-      //  .deleteContact(Contact.id)
-     //  .subscribe();
-
-     this.contact('deleteContact', ['$scope', '$http' ,function($scope,$http) { 
-      $scope.errors = [];
-      $scope.msgs = [];     
-      $scope.suppContact = function(id){
-        this.ContactService.success(function(data){  if (data.msg != '') { 
-        $scope.msgs.push(data.msg);     
-        }                         
-       else{                        
-      $scope.errors.push(data.error);   }          
-      }).error(function(data, status) {
-          $scope.errors.delete(status);   });   
-      };}]);
+     
   }
 
   initForm() {
@@ -60,9 +47,19 @@ export class ListcontactComponent implements OnInit ,OnDestroy {
     }
   
   
-  changementDePage = function () {
-   this.router.navigate(['contact/addcontact']);
+  changementDePage () {
+    this.router.navigate(['contact/addcontact']);
    
-   };
+  };
 
+  openDeleteBox(contact:any){
+    const dialogRef = this.deleteDialog.open(DeleteContactBoxDialog, {
+      width: '250px',
+      data: contact
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      });
   }
+}

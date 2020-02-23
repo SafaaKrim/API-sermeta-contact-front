@@ -21,6 +21,9 @@ import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import{RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AddcontactComponent } from './conctact/addcontact/addcontact.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DeleteContactBoxDialog } from './list/listcontact/delete-contact-box.component';
 
 
 
@@ -54,7 +57,8 @@ const appRoutes: Routes = [
     FooterComponent,
     ListcontactComponent,
     ListentrepriseComponent,
-    HomeComponent
+    HomeComponent,
+    DeleteContactBoxDialog
     
     
   ],
@@ -64,13 +68,16 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     SlimLoadingBarModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [
     BrowserModule,
     ContactService,
     EntrepriseService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[DeleteContactBoxDialog]
 })
 export class AppModule { }
