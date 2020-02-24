@@ -9,7 +9,6 @@ import { DeleteContactBoxDialog } from './delete-contact-box.component';
 
 
 
-
 @Component({
   selector: 'app-listcontact',
   templateUrl: './listcontact.component.html',
@@ -61,7 +60,6 @@ export class ListcontactComponent implements OnInit ,OnDestroy {
       width: '250px',
       data: contact
     });
-
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.refreshList()

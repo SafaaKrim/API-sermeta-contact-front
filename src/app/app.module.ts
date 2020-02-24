@@ -24,7 +24,7 @@ import { AddcontactComponent } from './conctact/addcontact/addcontact.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DeleteContactBoxDialog } from './list/listcontact/delete-contact-box.component';
-//import { DeleteEntrepriseBoxDialog} from './list/listentreprise/delete-entreprise-box.component';
+import { DeleteEntrepriseBoxDialog } from "./list/listentreprise/DeleteEntrepriseBoxDialog";
 
 
 
@@ -59,7 +59,7 @@ const appRoutes: Routes = [
     ListentrepriseComponent,
     HomeComponent,
     DeleteContactBoxDialog,
-   // DeleteEntrepriseBoxDialog
+    DeleteEntrepriseBoxDialog
     
     
   ],
@@ -79,8 +79,7 @@ const appRoutes: Routes = [
     EntrepriseService
   ],
   bootstrap: [AppComponent],
-  entryComponents:[DeleteContactBoxDialog],
-  //entryComponents:[DeleteEntrepriseBoxDialog],
+  entryComponents:[DeleteContactBoxDialog,DeleteEntrepriseBoxDialog],
 
 })
 export class AppModule { }

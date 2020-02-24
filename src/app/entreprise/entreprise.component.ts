@@ -93,13 +93,12 @@ initForm() {
     //const formValue = this.contactForm;
     alert(this.entrepriseForm.value.nom);
     const entrepriseUpdate = {
-      // this.entrepriseForm.value.denomination,
       denomination:this.entrepriseForm.value.finalite,
       taille:this.entrepriseForm.value.taille,
       statut_juridique:this.entrepriseForm.value.statut_juridique,
       natinalite:this.entrepriseForm.value.natinalite,
       ville:this.entrepriseForm.value.ville,
-      entreprise:this.entrepriseForm.value.entreprise
+      contact:this.contactForm.value.entreprise
     }
 
     console.log("You are about to edit a entreprise:", entrepriseUpdate);
@@ -112,6 +111,6 @@ initForm() {
       alert("Could not edit this entreprise");
     });
      
-    this.router.navigate(['/listcontact']);
+    this.router.navigate(['/listentrepise']);
   }
 }

@@ -1,7 +1,6 @@
 
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
-
 import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
@@ -30,7 +29,6 @@ import { ContactService } from 'src/app/services/contact.service';
       })
       
     }
-    
     no(): void {
         this.dialogRef.close();
     }

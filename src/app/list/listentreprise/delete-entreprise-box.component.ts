@@ -1,18 +1,17 @@
 
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
-
 import { EntrepriseService } from 'src/app/services/entreprise.service';
 
 @Component({
     selector: 'delete-entreprise-box.component',
     templateUrl: 'delete-entreprise-box.component.html',
   })
-  export class DeleteContactBoxDialog {
+  export class DeleteEntrepriseBoxDialog {
   
     constructor(
       private entrepriseService: EntrepriseService,
-      public dialogRef: MatDialogRef<DeleteContactBoxDialog>,
+      public dialogRef: MatDialogRef<DeleteEntrepriseBoxDialog>,
       @Inject(MAT_DIALOG_DATA) public data: any) {
         console.log("Data got in the delete entreprise:",data)
       }
@@ -21,10 +20,10 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
       /// TODO delete using data._id
       const { _id } = this.data;
       this.entrepriseService.deleteEntreprise(_id).subscribe((data)=>{
-        alert("Deleted x) tu vas modifier le texte aprEs vu que j'ai pas d'accent sur mon clavier :) ")
+        alert("Deléted")
         this.dialogRef.close();
       },(err)=>{
-        alert("Ne pouvait pas supprimer ce entreprise")
+        alert("Ne pouvait pas supprimer cette entreprise")
         console.error(err);
         this.dialogRef.close();
       })
