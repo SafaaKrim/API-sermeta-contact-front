@@ -20,7 +20,6 @@ export class EntrepriseComponent implements OnInit {
   ville: String;
   contact: String;
   id: string;
-  contactForm: FormGroup;
   errorMessage: [ ];
   entrepriseForm: FormGroup;
 
@@ -91,14 +90,15 @@ initForm() {
 
   onSubmitForm() {
     //const formValue = this.contactForm;
-    alert(this.entrepriseForm.value.nom);
+    alert(this.entrepriseForm.value.denomination);
     const entrepriseUpdate = {
-      denomination:this.entrepriseForm.value.finalite,
+      denomination:this.entrepriseForm.value.denomination,
+      finalite:this.entrepriseForm.value.finalite,
       taille:this.entrepriseForm.value.taille,
       statut_juridique:this.entrepriseForm.value.statut_juridique,
       natinalite:this.entrepriseForm.value.natinalite,
       ville:this.entrepriseForm.value.ville,
-      contact:this.contactForm.value.entreprise
+      contact:this.entrepriseForm.value.entreprise
     }
 
     console.log("You are about to edit a entreprise:", entrepriseUpdate);
