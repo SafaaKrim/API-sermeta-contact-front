@@ -56,7 +56,7 @@ export class AddentrepriseComponent implements OnInit {
     }
   else { 
   this.id = entreprise.id;
-  console.log(this.id); // popular
+  console.log(this.id);
   this.EntrepriseService.getEntreprisebyid(this.id).subscribe
   ((data:any)=>{ 
     this.denomination= data.denomination,
@@ -87,7 +87,7 @@ export class AddentrepriseComponent implements OnInit {
 
 
   onSubmitForm() {
-    //const formValue = this.contactForm;
+    
     alert(this.entrepriseForm.value.nom);
     this.EntrepriseService.addEntreprise(this.entrepriseForm.value.denomination,
       this.entrepriseForm.value.finalite,

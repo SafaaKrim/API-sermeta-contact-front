@@ -98,7 +98,7 @@ initForm() {
       statut_juridique:this.entrepriseForm.value.statut_juridique,
       natinalite:this.entrepriseForm.value.natinalite,
       ville:this.entrepriseForm.value.ville,
-      contact:this.entrepriseForm.value.entreprise
+      contact:this.entrepriseForm.value.contact
     }
 
     console.log("You are about to edit a entreprise:", entrepriseUpdate);
@@ -111,6 +111,6 @@ initForm() {
       alert("Could not edit this entreprise");
     });
      
-    this.router.navigate(['/listentrepise']);
+    // this.router.navigate(['/listentrepise']);
   }
 }

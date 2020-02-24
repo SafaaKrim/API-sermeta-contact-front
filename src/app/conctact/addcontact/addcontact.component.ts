@@ -76,10 +76,7 @@ export class AddcontactComponent implements OnInit {
 
 
   }
-  private newMethod(contact) {
-    this.ContactService = contact.id;
-  }
-
+  
   initForm() {
     this.contactForm = this.formBuilder.group({
     nom: '' ,
