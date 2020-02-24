@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
-
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar'
 import { AppComponent } from './app.component';
 import { ConctactComponent } from './conctact/conctact.component';
 import { DetailscontactComponent } from './conctact/detailscontact/detailscontact.component';

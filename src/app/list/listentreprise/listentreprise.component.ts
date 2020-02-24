@@ -21,7 +21,7 @@ export class ListentrepriseComponent implements OnInit,OnDestroy{
 
   constructor( 
     private EntrepriseServise: EntrepriseService,
-    private router: Router,
+    private router : Router,
     public deleteDialog: MatDialog
     ) { }
 
