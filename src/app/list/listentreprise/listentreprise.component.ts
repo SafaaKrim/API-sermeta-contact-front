@@ -4,7 +4,7 @@ import { Entreprise } from 'src/app/models/entreprise.models';
 import { Subscription } from 'rxjs/Subscription';
 import { EntrepriseService } from 'src/app/services/entreprise.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { DeleteEntrepriseBoxDialog } from "./DeleteEntrepriseBoxDialog";
+import { DeleteEntrepriseBoxDialog } from "./delete-entreprise-box.component";
 
 @Component({
   selector: 'app-listentreprise',
