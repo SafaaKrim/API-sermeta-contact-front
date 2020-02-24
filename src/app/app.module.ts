@@ -9,7 +9,6 @@ import { DetailscontactComponent } from './conctact/detailscontact/detailscontac
 import { EntrepriseComponent } from './entreprise/entreprise.component';
 import { DetailsentrepriseComponent } from './entreprise/detailsentreprise/detailsentreprise.component';
 import { AddentrepriseComponent } from './entreprise/addentreprise/addentreprise.component';
-import { SupentrepriseComponent } from './entreprise/supentreprise/supentreprise.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ListcontactComponent } from './list/listcontact/listcontact.component';
@@ -38,7 +37,6 @@ const appRoutes: Routes = [
   { path: 'entreprise/addentreprise', component: AddentrepriseComponent},
   { path: 'contact/detailscontact', component: DetailscontactComponent},
   { path: 'entreprise/detailsentreprise', component: DetailsentrepriseComponent},
-  { path: 'entreprise/supentreprise', component: SupentrepriseComponent},
 
 ]
 
@@ -52,7 +50,6 @@ const appRoutes: Routes = [
     EntrepriseComponent,
     DetailsentrepriseComponent,
     AddentrepriseComponent,
-    SupentrepriseComponent,
     HeaderComponent,
     FooterComponent,
     ListcontactComponent,

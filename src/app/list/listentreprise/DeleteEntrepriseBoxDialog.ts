@@ -1,6 +1,7 @@
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Component, Inject } from '@angular/core';
 import { EntrepriseService } from 'src/app/services/entreprise.service';
+
 @Component({
   selector: 'delete-entreprise-box.component',
   templateUrl: 'delete-entreprise-box.component.html',
