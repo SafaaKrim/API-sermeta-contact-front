@@ -21,8 +21,8 @@
                   <td class="align-middle">{{entreprise.denomination}}</td>
                   <td class="align-middle">{{entreprise.finalite}}</td>
                  <td class="align-middle">{{entreprise.ville}}</td>
-                 <th><button class="btn btn-info" ><a [routerLink]="['/entreprise/addentreprise']" [queryParams]="{ id: entreprise._id }"><div class="glyphicon glyphicon-pencil"></div></a></button></th>
-                 <th><button class="btn btn-danger"><div class="glyphicon glyphicon-trash"></div></button></th> 
+                 <th><button class="btn btn-info" ><a [routerLink]="['/entreprise/entreprise']" [queryParams]="{ id: entreprise._id }"><div class="glyphicon glyphicon-pencil"></div></a></button></th>
+                 <th><button class="btn btn-danger" (click)="openDeleteBox(entreprise)"><div class="glyphicon glyphicon-trash"></div></button></th> 
                  <th><button class="btn btn-success"><a [routerLink]="['/entreprise/detailsentreprise']" [queryParams]="{ id: entreprise._id }"><div class="glyphicon glyphicon-plus"></div></a></button></th>   
     
                     </tr>

@@ -1,1 +1,47 @@
-<p>entreprise works!</p>
+<div class ="form form-daccord">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2>Modifier une entreprise</h2>
+          <div class="card">
+            <div class="card-body">
+          <form [formGroup]="entrepriseForm" (submit)="onSubmitForm()" >
+            <div class="form-group">
+                      <label class="col-md-4">Dénomination</label>
+                    <input type="text" [(ngModel)]="denomination" class="form-control" formControlName="denomination" />
+                  </div>
+                  <div class="form-group">
+                      <label class="col-md-4">FInalité</label>
+                    <input type="text" [(ngModel)]="finalite" class="form-control" formControlName="finalite" />
+                  </div>
+
+
+                <div class="form-group">
+                      <label class="col-md-4">Taille</label>
+                      <input type="text" [(ngModel)]="taille" class="form-control"  formControlName="taille">
+                </div>
+                <div class="form-group">
+                    <label for="inputStatu">Statu juridique</label>
+                    <input type="text"[(ngModel)]="statut_juridique" class="form-control"  formControlName="statut_juridique" />
+                  </div>
+                
+                
+                    <div class="form-group ">
+                      <label for="inputVille">Ville</label>
+                      <input type="text" [(ngModel)]="ville" class="form-control" id="inputVille" formControlName="ville">
+                    </div><br/>
+                 
+                      <div class="form-group">
+                          <label for="inputEntreprise">Contact</label>
+                          <input type="text" [(ngModel)]="contact" class="form-control" id="inputEntreprise"  formControlName="contact">
+                    </div><br/>
+           <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click)="operation ='idit';">Modifier</button>
+           </div>
+          </form>
+        </div>
+      </div>
+   </div>
+ </div>
+</div>  
+    
+

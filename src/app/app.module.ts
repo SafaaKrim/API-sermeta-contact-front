@@ -4,7 +4,7 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 import { AppComponent } from './app.component';
 import { ConctactComponent } from './conctact/conctact.component';
-import { SuppcontactComponent } from './conctact/suppcontact/suppcontact.component';
+
 import { DetailscontactComponent } from './conctact/detailscontact/detailscontact.component';
 import { EntrepriseComponent } from './entreprise/entreprise.component';
 import { DetailsentrepriseComponent } from './entreprise/detailsentreprise/detailsentreprise.component';
@@ -24,6 +24,7 @@ import { AddcontactComponent } from './conctact/addcontact/addcontact.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DeleteContactBoxDialog } from './list/listcontact/delete-contact-box.component';
+//import { DeleteEntrepriseBoxDialog} from './list/listentreprise/delete-entreprise-box.component';
 
 
 
@@ -32,11 +33,11 @@ const appRoutes: Routes = [
   { path: 'list/listentreprise', component: ListentrepriseComponent},
   { path: 'list/listcontact', component: ListcontactComponent},
   { path: 'contact/conctact', component: ConctactComponent},
+  { path: 'entreprise/entreprise', component: EntrepriseComponent},
   { path: 'contact/addcontact', component: AddcontactComponent},
   { path: 'entreprise/addentreprise', component: AddentrepriseComponent},
   { path: 'contact/detailscontact', component: DetailscontactComponent},
   { path: 'entreprise/detailsentreprise', component: DetailsentrepriseComponent},
-  { path: 'contact/suppcontact', component: SuppcontactComponent},
   { path: 'entreprise/supentreprise', component: SupentrepriseComponent},
 
 ]
@@ -47,7 +48,6 @@ const appRoutes: Routes = [
     AddcontactComponent,
     DetailsentrepriseComponent,
     ConctactComponent,
-    SuppcontactComponent,
     DetailscontactComponent,
     EntrepriseComponent,
     DetailsentrepriseComponent,
@@ -58,7 +58,8 @@ const appRoutes: Routes = [
     ListcontactComponent,
     ListentrepriseComponent,
     HomeComponent,
-    DeleteContactBoxDialog
+    DeleteContactBoxDialog,
+   // DeleteEntrepriseBoxDialog
     
     
   ],
@@ -78,6 +79,8 @@ const appRoutes: Routes = [
     EntrepriseService
   ],
   bootstrap: [AppComponent],
-  entryComponents:[DeleteContactBoxDialog]
+  entryComponents:[DeleteContactBoxDialog],
+  //entryComponents:[DeleteEntrepriseBoxDialog],
+
 })
 export class AppModule { }
