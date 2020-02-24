@@ -20,7 +20,7 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
       /// TODO delete using data._id
       const { _id } = this.data;
       this.entrepriseService.deleteEntreprise(_id).subscribe((data)=>{
-        alert("Deléted")
+        alert("Supprimer")
         this.dialogRef.close();
       },(err)=>{
         alert("Ne pouvait pas supprimer cette entreprise")

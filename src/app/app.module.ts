@@ -4,7 +4,6 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 import { AppComponent } from './app.component';
 import { ConctactComponent } from './conctact/conctact.component';
-
 import { DetailscontactComponent } from './conctact/detailscontact/detailscontact.component';
 import { EntrepriseComponent } from './entreprise/entreprise.component';
 import { DetailsentrepriseComponent } from './entreprise/detailsentreprise/detailsentreprise.component';

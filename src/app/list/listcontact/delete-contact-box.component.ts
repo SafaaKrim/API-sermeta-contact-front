@@ -20,7 +20,7 @@ import { ContactService } from 'src/app/services/contact.service';
       /// TODO delete using data._id
       const { _id } = this.data;
       this.contactService.deleteContact(_id).subscribe((data)=>{
-        alert("Deleted x) tu vas modifier le texte aprEs vu que j'ai pas d'accent sur mon clavier :) ")
+        alert("Supprimer ")
         this.dialogRef.close();
       },(err)=>{
         alert("Ne pouvait pas supprimer ce contact")
