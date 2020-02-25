@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { Contact } from 'src/app/models/contact.models';
 import { Subscription } from 'rxjs/Subscription';
 import { ContactService } from 'src/app/services/contact.service';
-
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DeleteContactBoxDialog } from './delete-contact-box.component';
 

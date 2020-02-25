@@ -3,17 +3,17 @@
 
         <div class="text-right">
             <button type="submit" class="btn btn-primary"
-        (click)="changementDePage();">Ajouter une Eentreprise</button></div><br/>
+        (click)="changementDePage();">Ajouter une Entreprise</button></div><br/>
         <table class="table table-hover table-bordered">
               <thead class="thead-dark">
                 <tr>
                     <th class="text-center">#</th>
-                    <th>dénomination</th>
-                    <th>finalité</th>
+                    <th>Dénomination</th>
+                    <th>Finalité</th>
                     <th>Ville</th>
-                    <th>modifier</th>
-                    <th>supprimer </th>
-                    <th>details</th>    
+                    <th>Modifier</th>
+                    <th>Supprimer </th>
+                    <th>Détails</th>    
                 </tr>
             </thead>
             <tr routerLinkActive="active" *ngFor = "let entreprise of entreprises">

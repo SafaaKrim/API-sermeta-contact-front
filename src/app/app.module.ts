@@ -9,8 +9,8 @@ import { DetailsentrepriseComponent } from './entreprise/detailsentreprise/detai
 import { AddentrepriseComponent } from './entreprise/addentreprise/addentreprise.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ListcontactComponent } from './list/listcontact/listcontact.component';
-import { ListentrepriseComponent } from './list/listentreprise/listentreprise.component';
+import { ListcontactComponent } from './conctact/listcontact/listcontact.component';
+import { ListentrepriseComponent } from './entreprise/listentreprise/listentreprise.component';
 import { ContactService } from './services/contact.service';
 import { EntrepriseService } from './services/entreprise.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,15 +20,15 @@ import { HomeComponent } from './home/home.component';
 import { AddcontactComponent } from './conctact/addcontact/addcontact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-import { DeleteContactBoxDialog } from './list/listcontact/delete-contact-box.component';
-import { DeleteEntrepriseBoxDialog } from "./list/listentreprise/delete-entreprise-box.component";
+import { DeleteContactBoxDialog } from './conctact/listcontact/delete-contact-box.component';
+import { DeleteEntrepriseBoxDialog } from "./entreprise/listentreprise/delete-entreprise-box.component";
 
 
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'list/listentreprise', component: ListentrepriseComponent},
-  { path: 'list/listcontact', component: ListcontactComponent},
+  { path: 'entreprise/listentreprise', component: ListentrepriseComponent},
+  { path: 'conctact/listcontact', component: ListcontactComponent},
   { path: 'contact/conctact', component: ConctactComponent},
   { path: 'entreprise/entreprise', component: EntrepriseComponent},
   { path: 'contact/addcontact', component: AddcontactComponent},
